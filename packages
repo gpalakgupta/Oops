@@ -27,3 +27,9 @@ Thus, if your package is in a subdirectory of the current directory, it will be 
 
 When a package is imported, only those items within the package declared as public will be available to non-subclasses
 in the importing code.
+
+A non-static member belongs to an instance. It's meaningless without somehow resolving which instance of a class you
+are talking about. In a static context, you don't have an instance, that's why you can't access a non-static member
+without explicitly mentioning an object reference.
+In fact, you can access a non-static member in a static context by specifying the object reference explicitly :
+
